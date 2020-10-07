@@ -1,0 +1,34 @@
+<mat-selection-list>
+  <mat-list-option checkboxPosition="before">
+    <button mat-icon-button>
+      <mat-icon color="primary" [customTooltipTrigger]="tooltipSql">info</mat-icon>
+    </button>
+    SQL injection (SQLI)
+  </mat-list-option>
+
+  <mat-list-option checkboxPosition="before">
+    <button mat-icon-button>
+      <mat-icon color="primary" [customTooltipTrigger]="tooltipXss">info</mat-icon>
+    </button>
+    Cross-site scripting (XSS)
+  </mat-list-option>
+</mat-selection-list>
+
+<custom-tooltip #tooltipSql>
+  SQL injection is a code injection technique, used to attack data-driven applications,
+  in which malicious SQL statements are inserted into an entry field for execution
+  (e.g. to dump the database contents to the attacker).
+  SQL injection must exploit a security vulnerability in an application's software,
+  for example, when user input is either incorrectly filtered for string literal
+  escape characters embedded in SQL statements or user input is not strongly typed and unexpectedly executed.
+  <br/>
+  <a target="_blank" href="https://en.wikipedia.org/wiki/SQL_injection">Wiki Link</a>
+</custom-tooltip>
+
+<custom-tooltip #tooltipXss>
+  Cross-site scripting (XSS) is a type of web application security vulnerability typically found in web applications.
+  XSS attacks enable attackers to inject client-side scripts into web pages viewed by other users.
+  A cross-site scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy.
+  <br/>
+  <a target="_blank" href="https://en.wikipedia.org/wiki/Cross-site_scripting">Wiki Link</a>
+</custom-tooltip>

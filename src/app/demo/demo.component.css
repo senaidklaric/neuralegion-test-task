@@ -1,0 +1,11 @@
+.mat-list-text {
+  display: inline-block !important;
+}
+button {
+  border: none;
+  vertical-align: middle;
+  height: 24px;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+}

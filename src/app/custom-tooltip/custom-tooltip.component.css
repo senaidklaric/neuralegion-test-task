@@ -1,0 +1,18 @@
+.tooltip-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  background-color: rgba(44, 44, 44, 0.3);
+}
+.tooltip-wrapper {
+  position: absolute;
+  border-radius: 5px;
+  top: 60px;
+  background-color: rgba(44, 44, 44, 0.77);
+  color: #fff;
+  padding: 15px;
+  width: 40%;
+  left: 90px;
+}
