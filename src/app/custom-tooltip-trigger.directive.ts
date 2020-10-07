@@ -10,14 +10,9 @@ export class CustomTooltipTriggerDirective {
   @Input('customTooltipTrigger') tooltip: CustomTooltipComponent;
 
   @HostListener('click', ['$event']) onClick(evt) {
+    var elemPosition = evt.target.getBoundingClientRect();
     evt.stopPropagation();
     evt.preventDefault();
-    this.tooltip.toggleTooltip();
-  }
-
-  toggleTooltip() {
-    if (this.tooltip) {
-      this.tooltip.toggleTooltip();
-    }
+    this.tooltip.toggleTooltip(elemPosition.y);
   }
 }

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnInit } from '@angular/core';
 import { timer } from 'rxjs';
 import { Observable } from 'rxjs';
 
@@ -9,17 +9,22 @@ import { Observable } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CustomTooltipComponent implements OnInit {
-  constructor(private ref: ChangeDetectorRef) {
+  constructor(private el: ElementRef, private ref: ChangeDetectorRef) {
     this.ref.detach();
   }
-
   show: boolean = false;
+  tooltipYPosition: number;
 
   obsTimer: Observable<number> = timer(0, 1000);
   formattedTime: string;
 
-  public toggleTooltip(): void {
+  public toggleTooltip(elemPosition: number): void {
     this.show = !this.show;
+
+    //positioning tooltip vertically relative to the info icon
+    //default value matches top element's
+    this.tooltipYPosition = elemPosition;
+
     this.ref.detectChanges();
   }
 

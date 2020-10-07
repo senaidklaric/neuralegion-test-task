@@ -1,8 +1,8 @@
 <ng-template [ngIf]="show">
-  <div class="tooltip-overlay" (click)="toggleTooltip()"></div>
-  <div class="tooltip-wrapper">
+  <div class="tooltip-overlay" (click)="toggleTooltip(0)"></div>
+  <div class="tooltip-wrapper" [ngStyle]="{'top.px': tooltipYPosition}">
     <div class="tooltip-time">Time: {{formattedTime}}</div>
-    <mat-icon class="tooltip-clear-icon" (click)="toggleTooltip()">clear</mat-icon>
+    <mat-icon class="tooltip-clear-icon" (click)="toggleTooltip(0)">clear</mat-icon>
     <hr />
     <ng-content></ng-content>
   </div>

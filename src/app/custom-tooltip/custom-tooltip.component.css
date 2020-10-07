@@ -17,8 +17,9 @@
   background-color: rgba(44, 44, 44, 0.77);
   color: #fff;
 }
-a {
-  color: #ffa500;
+.tooltip-wrapper hr {
+  margin-left: -15px;
+  margin-right: -15px;
 }
 .tooltip-time {
   display: inline-block;
