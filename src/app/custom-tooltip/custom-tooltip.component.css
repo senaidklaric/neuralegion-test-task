@@ -8,11 +8,22 @@
 }
 .tooltip-wrapper {
   position: absolute;
+  width: 410px;
   border-radius: 5px;
+  padding: 15px;
   top: 60px;
+  left: 90px;
+  line-height: 24px;
   background-color: rgba(44, 44, 44, 0.77);
   color: #fff;
-  padding: 15px;
-  width: 40%;
-  left: 90px;
+}
+a {
+  color: #ffa500;
+}
+.tooltip-time {
+  display: inline-block;
+}
+.tooltip-clear-icon {
+  float: right;
+  cursor: pointer;
 }

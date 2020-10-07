@@ -9,3 +9,12 @@ button {
   outline: none !important;
   cursor: pointer;
 }
+custom-tooltip a {
+  color: #ffa500;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 5px;
+}
+custom-tooltip a:hover {
+  color: #d08700;
+}

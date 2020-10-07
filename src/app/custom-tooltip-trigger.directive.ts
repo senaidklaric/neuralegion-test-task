@@ -12,7 +12,7 @@ export class CustomTooltipTriggerDirective {
   @HostListener('click', ['$event']) onClick(evt) {
     evt.stopPropagation();
     evt.preventDefault();
-    this.toggleTooltip();
+    this.tooltip.toggleTooltip();
   }
 
   toggleTooltip() {

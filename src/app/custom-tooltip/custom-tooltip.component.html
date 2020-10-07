@@ -1,7 +1,8 @@
 <ng-template [ngIf]="show">
   <div class="tooltip-overlay" (click)="toggleTooltip()"></div>
   <div class="tooltip-wrapper">
-    <div>Time:</div>
+    <div class="tooltip-time">Time: {{formattedTime}}</div>
+    <mat-icon class="tooltip-clear-icon" (click)="toggleTooltip()">clear</mat-icon>
     <hr />
     <ng-content></ng-content>
   </div>
